@@ -12,6 +12,7 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
+    "dotenv": "^16.0.3",
     "electron": "^21.3.0",
     "electron-reload": "^2.0.0-alpha.1",
     "mariadb": "^3.0.2"

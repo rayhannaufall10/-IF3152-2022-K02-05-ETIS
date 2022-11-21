@@ -4,5 +4,5 @@ let tiket = new ticket.Ticket('08123456',0)
 const tmp = moment()
 const date = tmp.format("YYYY-MM-DD HH:mm:ss")
 
-console.log(date);
+ticket.Ticket.setLastIdTicket()
 // console.log(tiket.insertData());
