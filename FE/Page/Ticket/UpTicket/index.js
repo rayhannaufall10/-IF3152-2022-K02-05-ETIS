@@ -59,28 +59,6 @@ window.onclick = function (e) {
     resetFormValue()
   }
 };
-document.getElementById("modal-close").addEventListener("click", function () {
-  resetFormValue();
-  modalBG.style.display = "none";
-  modalContainer.style.display = "none";
-});
-// Configure quantitiy-container
-const plus = document.getElementById("plus");
-const minus = document.getElementById("minus");
-let number = document.getElementById("number");
-
-plus.addEventListener("click", (e) => {
-  let val = parseInt(number.innerText);
-  if (val == 5) return;
-  number.innerText = ++val;
-});
-
-minus.addEventListener("click", (e) => {
-  e.preventDefault();
-  let val = parseInt(number.innerText);
-  if (val == 1) return;
-  number.innerText = --val;
-});
 
 // Continue from Form
 function getDataForm(e) {
