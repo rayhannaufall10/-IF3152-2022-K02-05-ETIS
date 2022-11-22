@@ -20,7 +20,6 @@
   </head>
   <body>
     <div class="container">
-      <button id="mybtn">mybtn</button>
       <div class="header">
         <button class="backButton" onclick="history.back()">
           <img src="../../../images/leftArrow.png" alt="" />
@@ -42,41 +41,47 @@
               required
             />
           </div>
-          <!-- <div class="checkbox-container">
-            <input type="checkbox" id="fast-pass" />
-            <label for="fast-pass">fast pass</label>
-          </div> -->
           <div class="quantity-container">
             <button type="button" id="minus">-</button>
             <span id="number">1</span>
             <button type="button" id="plus">+</button>
           </div>
           <div class="buttons-container">
-            <button  id="continueButton">Continue</button>
+            <button id="continueButton">Continue</button>
             <button type="button" id="clearButton">Clear</button>
           </div>
         </form>
       </div>
     </div>
     <div class="modal-background">
+      <div class="modal-done">
+        <div class="done">
+          <h1>Done</h1>
+        </div>
+        <div class="loading">
+          <div class="lds-roller">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        </div>
+      </div>
       <div class="modal-container">
         <div class="modal-header">
           <h2>Fast Track</h2>
-          <button id="modal-close"><img src="../../../images/close.png" alt="" /></button>
+          <button id="modal-close">
+            <img src="../../../images/close.png" alt="" />
+          </button>
         </div>
-        <div class="modal-content">
-          <div class="box-container">
-            <label for="test1">
-              <div class="box-content">
-                <div class="detail-tiket">
-                  <span>T-0001</span>
-                  <span>23 Dec</span>
-                </div>
-              </div>
-            </label>
-            <input type="checkbox" id="test1">
-          </div>
-        </div>
+        <div class="modal-content"></div>
+      </div>
+      <div class="modal-confirm">
+        <button id="modal-button-confirm">Confirm</button>
       </div>
     </div>
   </body>
