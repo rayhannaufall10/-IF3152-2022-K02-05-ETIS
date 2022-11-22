@@ -2,7 +2,8 @@ const db = require("../../database")
 class Ticket{
     static tickets =[]
     static lastIdTicket = 0;
-    constructor(idTiket,nomorTelepon,fastPass){
+    constructor(idTiket,nomorTelepon,fastPass,date){
+        this.date = date
         this.idTiket = idTiket
         this.nomorTelepon = nomorTelepon
         this.fastPass = fastPass
@@ -18,17 +19,18 @@ class Ticket{
     }
     static async setLastIdTicket(){
         let id = await db.pool.query("select id_ticket from ticket order by id_ticket desc limit 1")
-        id = id[0].id_tiket
+        // let id = await db.pool.query("select * from ticket")
+        id = id[0].id_ticket
         Ticket.lastIdTicket = id;
         console.log(id);
         return id;
     }
     async insertData(){
         const noTelp = this.nomorTelepon
-        const harga = 10000
-        const fp = true
-        const date = new Date()
-        const result = await db.pool.query(`insert into ticket (nomor_telepon,tanggal,harga,fast_pass) values (${noTelp},${date},${harga},${fp})`)
+        const harga = "10000"
+        const fp = this.fastPass
+        const date = this.date
+        const result = await db.pool.query(`insert into ticket (nomor_telepon,tanggal,harga,fast_pass) values (${noTelp},'${date}',${harga},${fp})`)
         return result
     }
 }
