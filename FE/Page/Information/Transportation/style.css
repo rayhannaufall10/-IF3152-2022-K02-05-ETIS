@@ -92,10 +92,22 @@ body {
   box-shadow: 5.5px 0px 8px 0px rgba(0, 0, 0, 0.38);
 }
 
+.check-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 50px;
+  border: none; 
+  background: none;
+}
+.check-button img{
+  width: 100%;
+}
 
 .tableFixHead {
   overflow-y: auto;
-  height: 106px;
+  height: 350px;
 }
 .tableFixHead thead th {
   position: sticky;
@@ -104,12 +116,13 @@ body {
 table {
   border-collapse: collapse;
   width: 100%;
+  background: rgb(50, 213, 197)
 }
 th,
 td {
   padding: 8px 16px;
-  border: 1px solid #ccc;
+  border: 1px solid rgb(228, 144, 42);
 }
 th {
-  background: #eee;
+  background: rgb(148, 36, 228);
 }

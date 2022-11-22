@@ -9,7 +9,7 @@ function inserthtml(transportData){
     const html = `
         <tr>
             <td>${transportData[i].nama_kendaraan}</td>
-            <td>${transportData[i].destinatin}</td>
+            <td>${transportData[i].destination}</td>
             <td>${transportData[i].time_arrival}</td>
         </tr>
     `;

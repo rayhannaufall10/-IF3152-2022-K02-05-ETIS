@@ -12,7 +12,7 @@ class Transport{
         return data
     }
     static async getDataWithHari(harikerja){
-        let data = await db.pool.query(`select * from transportation where Hari_Operasi="${harikerja}"`)
+        let data = await db.pool.query(`select * from transportation where Hari_Operasi="${harikerja}" order by nama_kendaraan desc`)
         return data
     }
     static async Loopingtable(harikerja){
