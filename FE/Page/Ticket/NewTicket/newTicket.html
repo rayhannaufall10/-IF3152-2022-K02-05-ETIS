@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      rel="shortcut icon"
+      type="x-icon"
+      href="../../../images/favicon.ico"
+    />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>ETIS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Signika:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <button id="mybtn">mybtn</button>
+      <div class="header">
+        <button class="backButton" onclick="history.back()">
+          <img src="../../../images/leftArrow.png" alt="" />
+        </button>
+        <div class="title">
+          <h1>New Ticket</h1>
+        </div>
+      </div>
+      <div class="form-container">
+        <form id="form" class="form">
+          <div class="input-container">
+            <label class="label">Nomor Telepon :</label>
+            <input
+              type="text"
+              id="nomor-telepon"
+              name="nomor-telepon"
+              value=""
+              onkeypress="return onlyNumberKey(event)"
+              required
+            />
+          </div>
+          <!-- <div class="checkbox-container">
+            <input type="checkbox" id="fast-pass" />
+            <label for="fast-pass">fast pass</label>
+          </div> -->
+          <div class="quantity-container">
+            <button type="button" id="minus">-</button>
+            <span id="number">1</span>
+            <button type="button" id="plus">+</button>
+          </div>
+          <div class="buttons-container">
+            <button  id="continueButton">Continue</button>
+            <button type="button" id="clearButton">Clear</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="modal-background">
+      <div class="modal-container">
+        <div class="modal-header">
+          <h2>Fast Track</h2>
+          <button id="modal-close"><img src="../../../images/close.png" alt="" /></button>
+        </div>
+        <div class="modal-content">
+          
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    require("./index.js");
+  </script>
+  <script>
+    function onlyNumberKey(evt) {
+      // Only ASCII character in that range allowed
+      var ASCIICode = evt.which ? evt.which : evt.keyCode;
+      if (ASCIICode > 31 && (ASCIICode < 48 || ASCIICode > 57)) return false;
+      return true;
+    }
+  </script>
+</html>
