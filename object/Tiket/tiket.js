@@ -9,8 +9,7 @@ class Ticket{
         this.fastPass = fastPass
     }
     static async getDataWithId(idTicket){
-        let data = await db.pool.query(`select * from ticket where id_tiket=${idTicket}`)
-        // console.log(data[0].nomor_telepon);
+        let data = await db.pool.query(`select * from ticket where id_ticket=${idTicket}`)
         return data
     }
     static async getData(){
@@ -24,6 +23,11 @@ class Ticket{
         Ticket.lastIdTicket = id;
         console.log(id);
         return id;
+    }
+    static async setUpTicket(idTicket){
+        let data = await db.pool.query(`update ticket set fast_pass = 1 where id_ticket = ${idTicket}`)
+        // let id = await db.pool.query("select * from ticket")
+        return data;
     }
     async insertData(){
         const noTelp = this.nomorTelepon
