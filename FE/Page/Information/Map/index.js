@@ -57,6 +57,6 @@ function magnify(imgID, zoom) {
       y = y - window.pageYOffset;
       return {x : x, y : y};
     }
-  }
+}
 
 magnify("myimage", 2);
