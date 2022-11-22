@@ -47,7 +47,25 @@
                         <div class="namaStan">Nama Stan</div>
                     </div>
                 </div>
+
+                <div class="popup-image">
+                    <span>&times;</span>
+                    <img src="../../../images/roller.png" alt="">
+                </div>
             </div>
         </div>
     </body>
+    <script>
+        document.querySelectorAll('.stand-container img').forEach(image => {
+        image.onclick = () => {
+        document.querySelector('.popup-image').style.display = 'block';
+        console.log(document.querySelector('.popup-image').style.display)
+        // document.querySelector('.popup-image img').src = image.getAttribute('src'); 
+        }
+    });
+
+    document.querySelector('.popup-image span').onclick = () => {
+        document.querySelector('.popup-image').style.display = 'none';
+    }
+    </script>
 </html>
