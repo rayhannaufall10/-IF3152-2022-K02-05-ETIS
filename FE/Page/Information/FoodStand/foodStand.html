@@ -56,10 +56,9 @@
         </div>
     </body>
     <script>
-        document.querySelectorAll('.stand-container img').forEach(image => {
+        document.querySelectorAll('.name-container').forEach(image => {
         image.onclick = () => {
         document.querySelector('.popup-image').style.display = 'block';
-        console.log(document.querySelector('.popup-image').style.display)
         // document.querySelector('.popup-image img').src = image.getAttribute('src'); 
         }
     });
