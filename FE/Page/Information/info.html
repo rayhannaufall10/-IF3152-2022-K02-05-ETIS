@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link rel="shortcut icon" type="x-icon" href="images/favicon.ico" />
+    <link rel="shortcut icon" type="x-icon" href="../../images/favicon.ico" />
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,7 +9,44 @@
     <title>ETIS</title>
   </head>
   <body>
-    <h1>Information Page</h1>
+    <div class="container">
+      <img src="../../images/clouds.png" alt="" class="clouds">
+      <img src="../../images/wheel.png" alt="" class="wheel">
+      <div class="header">
+        <button class="backButton" onclick="history.back()">
+          <img src="../../images/leftArrow.png" alt="" />
+        </button>
+        <div class="title">
+          <h1>Information</h1>
+        </div>
+      </div>
+      
+      <div class="buttons-container">
+        <div class="button-container">
+          <a href="./Map/map.html" class="button">
+            <div class="icon-container">
+              <img src="../../images/map_icon.png" alt="" />
+            </div>
+            <div class="name-button">Map</div>
+          </a>
+        </div>
+        <div class="button-container">
+          <a href="./FoodStand/foodStand.html" class="button">
+            <div class="icon-container">
+              <img src="../../images/food.png" alt="" />
+            </div>
+            <div class="name-button">Food Stand</div>
+          </a>
+        </div>
+        <div class="button-container">
+          <a href="./Transportation/transportation.html" class="button">
+            <div class="icon-container">
+              <img src="../../images/transport.png" alt="" />
+            </div>
+            <div class="name-button">Transportation</div>
+          </a>
+        </div>
+      </div>
+    </div>
   </body>
-
 </html>
