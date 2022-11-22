@@ -25,13 +25,24 @@ function showModal(data) {
   // Show Modal
   modalBG.style.display = "flex";
   modalContainer.style.display = "flex";
-  let templateHTML = `<a href="">${data.nomorTelepon}
-    </a>`;
-  // const testE = document.getElementById("test");
-  // for (let i = data.lastId; i < data.lastId + data.quanitity; i++) {
-  //   testE.innerHTML += templateHTML;
-  // }
+  let modalContent = document.getElementsByClassName("modal-content");
+  modalContent = modalContent[0]
+  for (let i = data.lastId; i < data.lastId + data.quanitity; i++) {
+    const templateHTML = `<div class="box-container">
+    <label for="ticket-${i}">
+      <div class="box-content">
+        <div class="detail-ticket">
+          <span class="id-ticket">T-0001</span>
+          <span>23 Dec</span>
+        </div>
+      </div>
+    </label>
+    <input type="checkbox" id="ticket-${i}">
+  </div>`
+    modalContent.innerHTML += templateHTML;
+  }
   console.log(ticketModule.Ticket.tickets);
+  console.log(data.date.format("YYYY-MM-DD HH:mm:ss"))
 }
 
 // Close Modal when click outside modal container
@@ -74,7 +85,6 @@ function getDataForm(e) {
     return;
   }
   // newData.fastPass = fp;
-  let nTiket = new ticketModule.Ticket(newData.nomorTelepon, newData.fastPass);
   // Get quantitiy value
   let quanitity = parseInt(number.innerText);
   newData.quanitity = quanitity;
@@ -98,13 +108,15 @@ function resetFormValue() {
 
 // Create object Ticket and push to tickets
 async function createTickets(data) {
+  console.log(data);
   const nomorTelp = data.nomorTelepon;
   const idTicket = data.lastId + 1;
   const quanitity = data.quanitity + idTicket;
-  // for (let i = idTicket; i < quanitity; i++) {
-  //   let nTiket = new ticketModule.Ticket(i, nomorTelp, 0);
-  //   ticketModule.Ticket.tickets.push(nTiket);
-  // }
+  console.log(idTicket);
+  for (let i = idTicket; i < quanitity; i++) {
+    let nTiket = new ticketModule.Ticket(i, nomorTelp, 0);
+    ticketModule.Ticket.tickets.push(nTiket);
+  }
   showModal(data);
 }
 

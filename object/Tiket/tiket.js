@@ -18,10 +18,10 @@ class Ticket{
     }
     static async setLastIdTicket(){
         let id = await db.pool.query("select id_ticket from ticket order by id_ticket desc limit 1")
+        id = id[0].id_tiket
+        Ticket.lastIdTicket = id;
         console.log(id);
-        // id = id[0].id_tiket
-        // Ticket.lastIdTicket = id;
-        // return id;
+        return id;
     }
     async insertData(){
         const noTelp = this.nomorTelepon
