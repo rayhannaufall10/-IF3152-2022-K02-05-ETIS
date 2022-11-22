@@ -1,0 +1,123 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  background-attachment: fixed;
+  background: rgb(254, 255, 224);
+  background: linear-gradient(
+    160deg,
+    rgba(254, 255, 224, 1) 7%,
+    rgba(134, 253, 232, 1) 28%,
+    rgba(153, 217, 230, 1) 59%,
+    rgba(172, 182, 229, 1) 80%
+  );
+}
+.container {
+  width: 90%;
+  margin: 0 auto;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  padding-top: 6rem;
+}
+.clouds {
+  width: 500px;
+  position: absolute;
+  top: 0;
+  right: calc(50vw - 480px);
+}
+.wheel {
+  width: 450px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.header {
+  display: flex;
+  align-items: center;
+  column-gap: 2em;
+}
+.header .backButton {
+  background-color: #f0dd7a;
+  border: none;
+  border-radius: 20px;
+  width: 65px;
+  height: 65px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.header .backButton img {
+  width: 45%;
+}
+.header .title {
+  color: #f0dd7a;
+  text-shadow: 0px 4px 6px rgba(235, 4, 255, 0.63);
+  font-weight: bold;
+  font-size: 2rem;
+}
+.stands-container {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  column-gap: 6em;
+  position: relative;
+  top: 60px;
+}
+.stand-container {
+  width: 350px;
+  height: 60vh;
+}
+.stand {
+  display: flex;
+  align-items: center;
+  height: 85%;
+  border-radius: 20px;
+  border-bottom-left-radius: 0%;
+  border-bottom-right-radius: 0%;
+  box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.43);
+  text-decoration: none;
+  background-color: white;
+}
+.name-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20%;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.43);
+  text-decoration: none;
+  background-color: #7d91f3;
+}
+.namaStan {
+  font-family: 'Poppins', sans-serif;
+  font-size: 25px;
+  font-weight: bold;
+  color: white;
+}
+.button-container:nth-child(2) .icon-container {
+  background-color: #fb9134;
+}
+.button-container:last-child .icon-container {
+  background-color: #f37da0;
+}
+.icon-container img {
+  width: 55%;
+}
+.button-container .name-button {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #7d91f3;
+}
+.button-container:nth-child(2) .name-button {
+  color: #fb9134;
+}
+.button-container:last-child .name-button {
+  color: #f37da0;
+}
