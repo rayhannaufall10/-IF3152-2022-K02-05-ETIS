@@ -101,6 +101,14 @@ body {
   font-weight: bold;
   color: white;
 }
+.foto {
+  border-radius: 20px;
+  border-bottom-left-radius: 0%;
+  border-bottom-right-radius: 0%;
+  width:100%;
+  height:100%;
+  object-fit: cover;
+}
 .button-container:nth-child(2) .icon-container {
   background-color: #fb9134;
 }
