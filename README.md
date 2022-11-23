@@ -10,23 +10,19 @@ Install Electron
 npm install --save electron
 ```
 
-Install Electron Reload
-```
-npm install electron-reload
-```
-
-Install dotenv
-```
-npm i dotenv
-```
-## Membuat env
-1. Pada root folder atau folder yang paling awal dari seluruh code, bikin file `.env`
-2. Pada file tersebut, buat `DB_USER=` dengan nilainya sesuai dengan nama user db
-3. Buat `DB_PASSWORD=` dengan nilainya sesuai dengan password db yang dimiliki
+## Setting Database
+1. Ketika udah diclone, ubah data di file database.js sesuai dengan settingan masing-masing
+2. Buat Database dengan nama `etis`
+3. Melakukan import data dengan nama file `etis.sql`
 
 ## Run:
 ```
 npm start
+```
+
+## Compile menjadi .exe
+```
+npm run package-win
 ```
 
 ## Daftar modul yang diimplementasi
