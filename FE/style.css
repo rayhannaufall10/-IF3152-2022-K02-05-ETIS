@@ -18,8 +18,8 @@
   width: 20%;
 }
 body {
-  height: 100vh;
-  background-attachment: fixed;
+  height: 100%;
+  /* background-attachment: fixed; */
   background: rgb(254, 255, 224);
   background: linear-gradient(
     160deg,
@@ -28,6 +28,7 @@ body {
     rgba(153, 217, 230, 1) 59%,
     rgba(172, 182, 229, 1) 80%
   );
+  background-repeat: no-repeat;
 }
 .container {
   width: 90%;
