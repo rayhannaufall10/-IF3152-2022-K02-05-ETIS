@@ -29,7 +29,6 @@
     position: absolute;
     top: 0;
     right: calc(50vw - 480px);
-    z-index: -999;
   }
   .wheel {
     width: 450px;
@@ -41,8 +40,6 @@
     display: flex;
     align-items: center;
     column-gap: 2em;
-    justify-content: space-between;
-
   }
   .header .backButton {
     background-color: #f0dd7a;
@@ -78,13 +75,11 @@
     cursor: pointer;
   }
 
-  .header-left {
-    display: flex;
-    align-items: center;
-    column-gap: 2em;
+  .header .magnifyButton:active{
+    transform: scale(0.9);
   }
 
-  .map-container {
+  .img-magnifier-container {
     position: relative;
     width: 50vw;
     margin: auto;
@@ -97,37 +92,12 @@
     border-radius: 20px;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   }
-
-  .button-container {
-    width: 100px;
-    height: 100px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  
+  .img-magnifier-glass {
+    position: absolute;
+    border-radius: 50%;
+    cursor: none;
+    /*Set the size of the magnifier glass:*/
+    width: 200px;
+    height: 200px;
   }
-
-  .icon-container {
-    width: 65%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .icon-container img{
-    width: 100%;
-  }
-
-  .button-magnify{
-    width: 65px;
-    height: 65px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #f0dd7a;
-    border-radius: 20px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-    cursor: pointer;
-  }
-
