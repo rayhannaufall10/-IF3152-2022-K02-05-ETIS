@@ -4,6 +4,7 @@ const tbody = document.querySelector('tbody');
 
 
 function inserthtml(transportData){
+    tbody.innerHTML = ""
         
     for(let i = 0; i < transportData.length; i++){
     const html = `
