@@ -56,73 +56,100 @@ body {
   font-size: 2rem;
 }
 
-.buttons-container {
+.img-container{
   display: flex;
-  flex-direction: column;
-  height: 100%;
-  row-gap: 4em;
+  width: 20%;
+  background-color: rgb(244, 0, 0);
   position: relative;
-  top: 80px;
+  top: -30px;
 }
 
-.button-container {
-  width: 350px;
-  height: 10vh;
-}
-
-.button {
-  display: flex;
-  align-items: center;
-  height: 100%;
+#myimage {
+  width: 100%;
   border-radius: 20px;
-  column-gap: 1em;
-  box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.43);
-  text-decoration: none;
-  background-color: white;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0);
+  background-color: rgba(0, 0, 0, 0);
 }
 
-.icon-container {
-  background-color: #7d91f3;
+.top{
+  background-color: rgb(128, 0, 128);
   display: flex;
+  height: 150px;
+  justify-content: space-between;
+}
+
+.select-container{
+  width: 60%;
+  display: flex;
+  flex-direction: row;
+  column-gap: 2rem;
+  align-items: center;
+  background-color: rgba(0, 0, 255, 0);
+}
+
+#HariPilih{
+  Width: 150px;
+  cursor : pointer;
+}
+
+.select-content{
+  width: 70%;
+  height: 60px;
+  background-color: #f7f6f6e6;
+  border-radius: 20px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
-  width: 85px;
-  height: 100%;
-  border-radius: 20px;
-  box-shadow: 5.5px 0px 8px 0px rgba(0, 0, 0, 0.38);
 }
-
+.select-content label{
+  width: 50%;
+  /* display: flex; */
+}
 .check-button {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 20px;
-  height: 50px;
+  width: 40px;
   border: none; 
   background: none;
 }
 .check-button img{
   width: 100%;
+  cursor: pointer;
 }
 
 .tableFixHead {
   overflow-y: auto;
-  height: 350px;
+  height: 200px;
+  background-color: greenyellow;
 }
 .tableFixHead thead th {
   position: sticky;
   top: 0;
+  background-color: yellow;
 }
 table {
   border-collapse: collapse;
   width: 100%;
-  background: rgb(50, 213, 197)
+  height: 170%;
+  
+  background: rgb(0, 173, 253)
 }
 th,
 td {
   padding: 8px 16px;
-  border: 1px solid rgb(228, 144, 42);
+  border: 1px solid rgba(250, 250, 250, 0.729);
 }
 th {
-  background: rgb(148, 36, 228);
+  background: rgb(22, 150, 229);
+
+}
+#table tr td{
+  text-align: center;
+}
+
+thead tr th {
+  width: 160px;
 }
