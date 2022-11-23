@@ -48,7 +48,7 @@ body {
 .welcome-container .left {
 }
 .welcome-container .right {
-  font-size: 5rem;
+  font-size: 6.6rem;
 }
 .welcome-container .left h1,
 .welcome-container .left p,
@@ -62,10 +62,12 @@ body {
   align-items: center;
   height: 100%;
   column-gap: 2em;
+  position: relative;
+  top: -50px;
 }
 .button-container {
-  width: 250px;
-  height: 10vh;
+  width: 300px;
+  height: 100px;
 }
 .button {
   display: flex;
@@ -82,7 +84,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 35%;
+  width: 100px;
   height: 100%;
   border-radius: 20px;
   box-shadow: 5.5px 0px 8px 0px rgba(0, 0, 0, 0.38);
