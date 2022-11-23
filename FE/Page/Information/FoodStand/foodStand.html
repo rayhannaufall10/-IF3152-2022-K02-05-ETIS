@@ -21,11 +21,12 @@
             </div>
       
             <div class="stands-container">
-                <div class="stand-container">
+                <!-- <div class="stand-container">
                     <a href="" class="stand">
-                        <img src="../../../images/stand1.jpg" alt="" class="foto">
+                        <img id='test-img' src="" alt="" class="foto">
                     </a>
                     <div class="name-container">
+                        <span class="here"></span>
                         <div class="namaStan">Chattime Drink</div>
                     </div>
                 </div>
@@ -46,25 +47,13 @@
                     <div class="name-container">
                         <div class="namaStan">Nama Stan</div>
                     </div>
-                </div>
-
+                </div> -->
                 <div class="popup-image">
                     <span>&times;</span>
-                    <img src="../../../images/roller.png" alt="">
-                </div>
+                    <img src="" alt="">
+                </div> 
             </div>
         </div>
     </body>
-    <script>
-        document.querySelectorAll('.name-container').forEach(image => {
-        image.onclick = () => {
-        document.querySelector('.popup-image').style.display = 'block';
-        // document.querySelector('.popup-image img').src = image.getAttribute('src'); 
-        }
-    });
-
-    document.querySelector('.popup-image span').onclick = () => {
-        document.querySelector('.popup-image').style.display = 'none';
-    }
-    </script>
+    <script type="module" src="./index.js"></script>
 </html>
