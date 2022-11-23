@@ -6,9 +6,6 @@ const continueButton = document.getElementById("continueButton");
 let modalBG = document.getElementsByClassName("modal-background");
 modalBG = modalBG[0];
 
-document.getElementById("clearButton").addEventListener("click", () => {
-  form.reset();
-});
 
 async function mengambil_id(e){
   e.preventDefault()
@@ -16,11 +13,9 @@ async function mengambil_id(e){
   var id_data = await ticketModule.Ticket.getDataWithId(id_aktual)
   
   if (!id_data.length){
-    console.log("ppppp");
     var modal = document.getElementById("modalGaada");
-    var btn = document.getElementById("continueButton");
-    var span = document.getElementsByClassName("close1")[0];
-    console.log("masuk");
+    var span = document.getElementsByClassName("closeGaada")[0];
+    modal.style.display = "flex";
     //form.reset();
   }
   else{
@@ -28,54 +23,28 @@ async function mengambil_id(e){
     if (fp_data == 0){
       ticketModule.Ticket.setUpTicket(id_aktual)
       var modal = document.getElementById("modalBelum");
-      var btn = document.getElementById("continueButton");
-      var span = document.getElementsByClassName("close2")[0];
+      var span = document.getElementsByClassName("closeBelum")[0];
+      modal.style.display = "flex";
     }
     else{
       console.log("tiket sudah fast pass")
       var modal = document.getElementById("modalSudah");
-      var btn = document.getElementById("continueButton");
-      var span = document.getElementsByClassName("close3")[0];
+      var span = document.getElementsByClassName("closeSudah")[0];
+      modal.style.display = "flex";
     }
   }
-  // When the user clicks the button, open the modal 
-  console.log("kambing");
-  console.log(btn);
-  btn.onclick = function() {
-    modal.style.display = "flex";
-    console.log("kepencet")
-  }
-       // When the user clicks on <span> (x), close the modal
+  // When the user clicks on <span> (x), close the modal
   span.onclick = function() {
     modal.style.display = "none";
   }
-       // When the user clicks anywhere outside of the modal, close it
+  // When the user clicks anywhere outside of the modal, close it
   window.onclick = function(event) {
     if (event.target == modal) {
       modal.style.display = "none";
     }
   }
 }
-
-document.getElementById("continueButton").addEventListener("click", mengambil_id, false);
-//var modal = document.getElementById("modalGaada");
-//var btn = document.getElementById("continueButton");
-//var span = document.getElementsByClassName("close1")[0];
-//btn.onclick = function() {
-//  modal.style.display = "flex";
-//  console.log("kepencet")
-//}
-//     // When the user clicks on <span> (x), close the modal
-//span.onclick = function() {
-//  modal.style.display = "none";
-//}
-//     // When the user clicks anywhere outside of the modal, close it
-//window.onclick = function(event) {
-//  if (event.target == modal) {
-//    modal.style.display = "none";
-//  }
-//}
-
+      
 function showDoneConfirm(){
   let modalDone = document.getElementsByClassName('modal-done')[0]
   const done = document.getElementsByClassName('done')[0]
@@ -91,3 +60,9 @@ function showDoneConfirm(){
     
   }, 2000);  
 }
+
+document.getElementById("clearButton").addEventListener("click", () => {
+  form.reset();
+});
+
+document.getElementById("continueButton").addEventListener("click", mengambil_id, false);
