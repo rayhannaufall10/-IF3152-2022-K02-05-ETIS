@@ -71,8 +71,8 @@ body {
   top: 80px;
 }
 .button-container {
-  width: 350px;
-  height: 10vh;
+  width: 380px;
+  height: 100px;
 }
 .button {
   display: flex;
@@ -89,7 +89,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 85px;
+  width: 100px;
   height: 100%;
   border-radius: 20px;
   box-shadow: 5.5px 0px 8px 0px rgba(0, 0, 0, 0.38);
