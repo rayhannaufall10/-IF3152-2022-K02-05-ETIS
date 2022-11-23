@@ -42,5 +42,6 @@ npm run package-win
 
 | Nama Tabel                         | Atribut             |
 | -------------                      |:-------------:      |
-| Lorem ipsum                        | {lorem, lorem}      |
-
+| stan                               |id_stan, nama_stan, path_logo, path_menu|
+| ticket                             |id_ticket, nomor_telepon, tanggal, harga, fast_pass|
+| transportation                     |id_kendaraan, nama_kendaraan, destination, time_arrival, Hari_Operasi |
